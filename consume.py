@@ -26,7 +26,7 @@ offset_min = consumer.committed([tp])[0].offset
 print(offset_min, offset_max)
 sleep(2)
 
-number = offset_max - min(offset_min, 0)
+number = offset_max - max(offset_min, 0)
 
 print(f"Debería leer un total de {number} mensajes")
 
